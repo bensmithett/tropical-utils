@@ -1,0 +1,37 @@
+{
+  "name": "tropical-islands",
+  "version": "0.1.0",
+  "description": "Simple islands architecture helpers for React",
+  "keywords": [
+    "react",
+    "tropical",
+    "islands"
+  ],
+  "author": "Ben Smithett <bensmithett@users.noreply.github.com>",
+  "homepage": "https://github.com/bensmithett/tropical-utils",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bensmithett/tropical-utils.git"
+  },
+  "scripts": {
+    "build": "esbuild src/client.jsx src/server.jsx src/index.js --outdir=lib"
+  },
+  "bugs": {
+    "url": "https://github.com/bensmithett/tropical-utils/issues"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.15"
+  }
+}
