@@ -4,9 +4,11 @@ Simple islands architecture helpers for React. Built for [Tropical](https://trop
 
 ## Islands Architecture
 
-[Islands Architecture](https://jasonformat.com/islands-architecture/) refers to the [old-fashioned](https://www.bensmithett.com/declarative-js-components-with-viewloader-js/) approach of selectively, progressively enhancing bits of server-rendered HTML with client-side JS.
+[Islands Architecture](https://jasonformat.com/islands-architecture/) refers to the [old-fashioned](https://www.bensmithett.com/declarative-js-components-with-viewloader-js/) practice of selectively, progressively enhancing bits of server-rendered HTML with client-side JS.
 
-The React community has taken a while to get here. Major frameworks defaulted to downloading and hydrating the entire page as a single root-level component, even when most components that make up the page need no client-side enhancements.
+The React community has taken a while to get here. Major frameworks defaulted to downloading and hydrating the entire page as a single root-level component, even if most components that make up the page needed no client-side enhancements.
+
+Instead we can take a [partial hydration](https://markus.oberlehner.net/blog/partial-hydration-concepts-lazy-and-active/) approach, selectively hydrating the parts of the page that need it.
 
 ## Usage
 

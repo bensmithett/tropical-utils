@@ -1,0 +1,36 @@
+{
+  "name": "tropical-scaffold",
+  "version": "0.1.0",
+  "description": "CLI for scaffolding Tropical pages and components",
+  "keywords": [
+    "tropical",
+    "react"
+  ],
+  "author": "Ben Smithett <bensmithett@users.noreply.github.com>",
+  "homepage": "https://github.com/bensmithett/tropical-utils",
+  "license": "MIT",
+  "main": "bin/tropical-scaffold.js",
+  "bin": {
+    "tropical-scaffold": "./bin/tropical-scaffold.js"
+  },
+  "directories": {
+    "bin": "bin"
+  },
+  "files": [
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bensmithett/tropical-utils.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bensmithett/tropical-utils/issues"
+  },
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.5",
+    "pkg-dir": "^5.0.0"
+  }
+}
