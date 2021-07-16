@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import {extname, basename, resolve} from 'path'
+import {extname, basename, dirname, resolve} from 'path'
 import pkgDir from 'pkg-dir'
 import fse from 'fs-extra'
 import {pascalCase, sentenceCase} from 'change-case'
@@ -39,6 +39,7 @@ async function write (outFile, contents) {
 }
 
 async function scaffoldPage(projectRoot, path) {
+  const dir = dirname(path)
   const ext = extname(path).toLowerCase() || '.mdx'
   const filename = basename(path, ext)
   
@@ -54,7 +55,7 @@ async function scaffoldPage(projectRoot, path) {
       throw new Error(`Unsupported file extension: ${ext}`)
   }
 
-  const outFile = resolve(projectRoot, 'src/pages', `${filename}${ext}`)
+  const outFile = resolve(projectRoot, 'src/pages', dir, `${filename}${ext}`)
   write(outFile, contents)
 }
 
