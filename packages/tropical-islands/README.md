@@ -2,6 +2,10 @@
 
 Simple islands architecture helpers for React. Built for [Tropical](https://tropical.js.org/) but usable wherever you use React.
 
+```bash
+npm install tropical-islands
+```
+
 ## Islands Architecture
 
 [Islands Architecture](https://jasonformat.com/islands-architecture/) refers to the [old-fashioned](https://www.bensmithett.com/declarative-js-components-with-viewloader-js/) practice of selectively, progressively enhancing bits of server-rendered HTML with client-side JS.
