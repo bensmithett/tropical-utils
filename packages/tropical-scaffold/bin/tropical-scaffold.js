@@ -114,19 +114,17 @@ export function ${componentName}() {
 }
 
 function componentStories (componentName) {
-  return `import React from 'react'
+  return `import { Meta, Story } from '@storybook/addon-docs'
 import { ${componentName} } from './${componentName}'
 
-export default {
-  title: '${componentName}',
-  component: ${componentName}
-}
+<Meta title='${componentName}' component={${componentName}} />
 
-const Template = (args) => <${componentName} {...args} />
+export const Template = (args) => <${componentName} {...args} />
 
-export const Standard = Template.bind({})
-Standard.args = {
-  // props here
-}
+# ${componentName}
+
+## Stories
+
+<Story name='Default' args={{ /* props here */ }} />
 `
 }
