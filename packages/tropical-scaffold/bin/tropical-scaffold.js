@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {extname, basename, dirname, resolve} from 'path'
-import pkgDir from 'pkg-dir'
+import {packageDirectory} from 'pkg-dir'
 import fse from 'fs-extra'
 import {pascalCase, sentenceCase} from 'change-case'
 import minimist from 'minimist'
@@ -9,7 +9,7 @@ import minimist from 'minimist'
 const argv = minimist(process.argv.slice(2))
 
 ;(async () => {
-  const projectRoot = await pkgDir()
+  const projectRoot = await packageDirectory()
   const name = argv._[0]
 
   switch (argv.type) {
@@ -92,7 +92,7 @@ async function scaffoldComponent(projectRoot, name) {
   const componentsDir = resolve(projectRoot, 'src/components')
   write(resolve(projectRoot, 'src/components', name, 'index.js'), componentIndex(name))
   write(resolve(projectRoot, 'src/components', name, `${name}.jsx`), componentMain(name))
-  write(resolve(projectRoot, 'src/components', name, `${name}.stories.jsx`), componentStories(name))
+  write(resolve(projectRoot, 'src/components', name, `${name}.stories.mdx`), componentStories(name))
 }
 
 function componentIndex (componentName) {

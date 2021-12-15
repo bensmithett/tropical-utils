@@ -31,6 +31,6 @@
     "change-case": "^4.1.2",
     "fs-extra": "^10.0.0",
     "minimist": "^1.2.5",
-    "pkg-dir": "^5.0.0"
+    "pkg-dir": "^6.0.1"
   }
 }
