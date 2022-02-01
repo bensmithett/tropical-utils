@@ -23,7 +23,7 @@
     "url": "git+https://github.com/bensmithett/tropical-utils.git"
   },
   "scripts": {
-    "build": "esbuild src/client.jsx src/server.jsx src/index.js --outdir=lib"
+    "build": "esbuild src/client.jsx src/server.jsx src/index.js --outdir=lib --bundle --external:react --external:react-dom --format=esm"
   },
   "bugs": {
     "url": "https://github.com/bensmithett/tropical-utils/issues"

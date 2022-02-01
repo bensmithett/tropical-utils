@@ -69,8 +69,7 @@ function mdxPage(title) {
 }
 
 function jsxPage(componentName, title) {
-  return `import React from 'react'
-import { useFela } from 'react-fela'
+  return `import { useFela } from 'react-fela'
 
 export const meta = {
   title: \`${title}\`
@@ -100,8 +99,7 @@ function componentIndex (componentName) {
 }
 
 function componentMain (componentName) {
-  return `import React from 'react'
-import { useFela } from 'react-fela'
+  return `import { useFela } from 'react-fela'
 
 export function ${componentName}() {
   const { css } = useFela()
