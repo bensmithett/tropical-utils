@@ -12,5 +12,5 @@ Utility packages built for [Tropical](https://tropical.js.org/).
 ```bash
 yarn workspace tropical-islands build
 npx lerna changed
-npx lerna publish
+npx lerna publish --no-push
 ```
