@@ -91,7 +91,7 @@ async function scaffoldComponent(projectRoot, name) {
   const componentsDir = resolve(projectRoot, 'src/components')
   write(resolve(projectRoot, 'src/components', name, 'index.js'), componentIndex(name))
   write(resolve(projectRoot, 'src/components', name, `${name}.jsx`), componentMain(name))
-  write(resolve(projectRoot, 'src/components', name, `${name}.stories.mdx`), componentStories(name))
+  write(resolve(projectRoot, 'src/components', name, `${name}.stories.jsx`), componentStories(name))
 }
 
 function componentIndex (componentName) {
@@ -112,17 +112,10 @@ export function ${componentName}() {
 }
 
 function componentStories (componentName) {
-  return `import { Meta, Story } from '@storybook/addon-docs'
-import { ${componentName} } from './${componentName}'
+  return `import { ${componentName} } from './${componentName}'
 
-<Meta title='${componentName}' component={${componentName}} />
+export default { title: '${componentName}' }
 
-export const Template = (args) => <${componentName} {...args} />
-
-# ${componentName}
-
-## Stories
-
-<Story name='Default' args={{ /* props here */ }} />
+export const Basic = () => <${componentName} />
 `
 }
